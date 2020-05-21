@@ -1,0 +1,9 @@
+{
+  "name": "colorsapi",
+  "version": "1.0.0",
+  "description": "An API of Colors to import into your api.",
+  "main": "server.js",
+  "repository": "https://github.com/sonAndrew/ColorsAPI.git",
+  "author": "Andrew Jackson",
+  "license": "MIT"
+}
