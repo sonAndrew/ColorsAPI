@@ -1,11 +1,20 @@
 {
   "name": "colorsapi",
   "version": "1.0.0",
-  "description": "An API of Colors to import into your api.",
+  "description": "Colors API is a collection of colors, palletes, and web safe colors all in one place.",
   "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": "https://github.com/sonAndrew/ColorsAPI.git",
-  "author": "Andrew Jackson",
+  "author": "Andrew Jackson <andrewz.jackson@gmail.com>",
   "license": "MIT",
+  "keywords": [
+    "nodejs",
+    "express",
+    "postgres"
+  ],
   "dependencies": {
     "express": "^4.17.1",
     "pg": "^8.2.1"
