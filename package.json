@@ -5,5 +5,9 @@
   "main": "server.js",
   "repository": "https://github.com/sonAndrew/ColorsAPI.git",
   "author": "Andrew Jackson",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.2.1"
+  }
 }
