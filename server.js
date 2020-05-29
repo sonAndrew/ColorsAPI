@@ -5,6 +5,7 @@ const express = require('express'),
     host = 'https://www.colorsapi.com';
 
 const allColors = require('./routes/colors');
+const colorId = require('./routes/color');
 
 server.use(bodyParser.json());
 server.use(
@@ -13,6 +14,7 @@ server.use(
     })
 )
 
-server.get('/colors/all', allColors)
+server.get('/colors/all', allColors);
+server.get('/colors/:id', colorId);
 
 server.listen(port, () => console.log(`Server started on port: ${port}.`))
