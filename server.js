@@ -7,7 +7,8 @@ const express = require('express'),
 const allColors = require('./routes/colors'),
     color = require('./routes/color'),
     web_safe = require('./routes/web_safe'),
-    allPalettes = require('./routes/palettes');
+    allPalettes = require('./routes/palettes'),
+    palette = require('./routes/palette');
 
 server.use(bodyParser.json());
 server.use(
@@ -26,6 +27,11 @@ server.delete('/colors/:id', color.deleteColor);    // DELETE COLOR BY ID
 
 server.get('/web-safe', web_safe);                  // GET WEB SAFE COLORS
 
-server.get('/palettes', allPalettes);                  // GET ALL PALETTES
+server.get('/palettes/all', allPalettes);                  // GET ALL PALETTES
+
+server.get('/palettes/:id', palette.getPaletteById);      // GET Palette BY ID
+server.post('/palettes', palette.createPalette);          // CREATE Palette
+server.put('/palettes/:id', palette.updatePalette);       // UPDATE Palette BY ID
+server.delete('/palettes/:id', palette.deletePalette);    // DELETE Palette BY ID
 
 server.listen(port, () => console.log(`Server started on port: ${port}.`))
