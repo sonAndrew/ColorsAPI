@@ -2,7 +2,7 @@ const express = require('express'),
     bodyParser = require('body-parser'),
     server = express(),
     port = 3000,
-    host = 'https://pure-chamber-88568.herokuapp.com/';
+    host = 'https://safe-wildwood-48757.herokuapp.com/';
 
 const allColors = require('./routes/colors'),
     color = require('./routes/color'),
