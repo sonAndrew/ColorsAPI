@@ -17,6 +17,9 @@ server.use(
     })
 )
 
+server.get('/', (request, response) => {
+    response.send('Home Page')
+})
 
 server.get('/colors/all', allColors);               // GET ALL COLORS
 
