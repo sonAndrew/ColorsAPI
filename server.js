@@ -2,7 +2,7 @@ const express = require('express'),
     bodyParser = require('body-parser'),
     server = express(),
     port = 3000,
-    host = 'https://www.colorsapi.com';
+    host = 'https://pure-chamber-88568.herokuapp.com/';
 
 const allColors = require('./routes/colors'),
     color = require('./routes/color'),
@@ -34,4 +34,4 @@ server.post('/palettes', palette.createPalette);          // CREATE Palette
 server.put('/palettes/:id', palette.updatePalette);       // UPDATE Palette BY ID
 server.delete('/palettes/:id', palette.deletePalette);    // DELETE Palette BY ID
 
-server.listen(port, () => console.log(`Server started on port: ${port}.`))
+server.listen(host, () => console.log(`Server started on host: ${host}.`))
