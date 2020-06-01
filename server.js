@@ -37,4 +37,4 @@ server.post('/palettes', palette.createPalette);          // CREATE Palette
 server.put('/palettes/:id', palette.updatePalette);       // UPDATE Palette BY ID
 server.delete('/palettes/:id', palette.deletePalette);    // DELETE Palette BY ID
 
-server.listen(host, () => console.log(`Server started on host: ${host}.`))
+server.listen(port, () => console.log(`Server started on host: ${port}.`))
