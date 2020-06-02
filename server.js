@@ -1,8 +1,7 @@
 const express = require('express'),
     bodyParser = require('body-parser'),
     server = express(),
-    port = 3000,
-    host = 'https://safe-wildwood-48757.herokuapp.com/';
+    PORT = process.env.PORT || 8080;
 
 const allColors = require('./routes/colors'),
     color = require('./routes/color'),
@@ -16,6 +15,7 @@ server.use(
         extended: true,
     })
 )
+server.use(express.static("public"));
 
 server.get('/', (request, response) => {
     response.send('Home Page')
@@ -37,4 +37,4 @@ server.post('/palettes', palette.createPalette);          // CREATE Palette
 server.put('/palettes/:id', palette.updatePalette);       // UPDATE Palette BY ID
 server.delete('/palettes/:id', palette.deletePalette);    // DELETE Palette BY ID
 
-server.listen(port, () => console.log(`Server started on host: ${port}.`))
+server.listen(PORT, () => console.log(`Server started on: ${PORT}.`))
