@@ -1,7 +1,10 @@
-const express = require('express'),
-    bodyParser = require('body-parser'),
-    server = express(),
-    PORT = process.env.PORT || 8080;
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const { pool } = require('./config');
+
+const server = express();
+const PORT = process.env.PORT || 8080;
 
 const allColors = require('./routes/colors'),
     color = require('./routes/color'),
@@ -10,11 +13,9 @@ const allColors = require('./routes/colors'),
     palette = require('./routes/palette');
 
 server.use(bodyParser.json());
-server.use(
-    bodyParser.urlencoded({
-        extended: true,
-    })
-)
+server.use(bodyParser.urlencoded({extended: true, }));
+app.use(cors());
+
 server.use(express.static("public"));
 
 server.get('/', (request, response) => {
