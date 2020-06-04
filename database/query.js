@@ -1,13 +1,15 @@
-const { Pool } = require('pg'),
-    pool = new Pool(
-        {
-            user: 'lcwzeiyamnfwup',
-            host: 'ec2-52-7-39-178.compute-1.amazonaws.com',
-            password: '39d3a89ac647de577d84f75ef9ea9a94e02e9447c8ce59f239c043bfa562a41b',
-            database: 'd172toiumabb6t',
-            post: '5432'
-        }
-    );
+// const { Pool } = require('pg'),
+//     pool = new Pool(
+//         {
+//             user: 'lcwzeiyamnfwup',
+//             host: 'ec2-52-7-39-178.compute-1.amazonaws.com',
+//             password: '39d3a89ac647de577d84f75ef9ea9a94e02e9447c8ce59f239c043bfa562a41b',
+//             database: 'd172toiumabb6t',
+//             post: '5432'
+//         }
+//     );
+
+const { pool } = require('../config');
 
     module.exports = {
         query: (text, params, callback) => {

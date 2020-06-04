@@ -1,10 +1,12 @@
 {
   "name": "colorsapi",
   "version": "1.0.0",
+  "private": true,
   "description": "Colors API is a collection of colors, palletes, and web safe colors all in one place.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "start:dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "https://github.com/sonAndrew/ColorsAPI.git",
@@ -13,12 +15,16 @@
   "keywords": [
     "nodejs",
     "express",
-    "postgres"
+    "postgres",
+    "heroku"
   ],
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "pg": "^8.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
