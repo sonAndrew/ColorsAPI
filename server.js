@@ -1,11 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const helmet = require('helmet')
-const compression = require('compression')
-const rateLimit = require('express-rate-limit')
-const { body, check } = require('express-validator')
-
+const helmet = require('helmet');
+const compression = require('compression');
+const rateLimit = require('express-rate-limit');
+const { body, check } = require('express-validator');
+const { pool } = require('./config');
 
 const server = express();
 const PORT = process.env.PORT || 8080;
@@ -44,7 +44,21 @@ server.get('/', (request, response) => {
     response.send('Home Page')
 })
 
-server.get('/colors/all', allColors);               // GET ALL COLORS
+// // GET ALL COLORS in colors TABLE
+// const getAllColors = (request, response, next) => {
+//   pool.query('SELECT * FROM colors', (error, results) => {
+//       if(error) {
+//           return next(error)
+//       }
+//       response.status(200).json(results.rows);
+//   })
+// }
+
+// server
+//   .route('/colors')
+//   .get(getAllColors) // GET BOOKS
+
+server.get('/colors', allColors);               // GET ALL COLORS
 
 server.get('/colors/:id', color.getColorById);      // GET COLOR BY ID
 server.post('/colors', postLimiter, color.createColor);          // CREATE COLOR
