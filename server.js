@@ -67,7 +67,7 @@ server.delete('/colors/:id', color.deleteColor);    // DELETE COLOR BY ID
 
 server.get('/web-safe', web_safe);                  // GET WEB SAFE COLORS
 
-server.get('/palettes/all', allPalettes);                  // GET ALL PALETTES
+server.get('/palettes', allPalettes);                  // GET ALL PALETTES
 
 server.get('/palettes/:id', palette.getPaletteById);      // GET Palette BY ID
 server.post('/palettes', postLimiter, palette.createPalette);          // CREATE Palette

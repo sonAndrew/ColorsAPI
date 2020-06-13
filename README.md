@@ -10,11 +10,11 @@
 
 ### Routes
 
-    GET ALL COLORS - /colors/all
+    GET ALL COLORS - /colors
 
     GET COLOR BY ID - /colors/:id
 
-    REATE COLOR - /colors
+    CREATE COLOR - /colors
 
     UPDATE COLOR BY ID - /colors/:id
 
