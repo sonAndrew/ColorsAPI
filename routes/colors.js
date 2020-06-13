@@ -1,9 +1,9 @@
-const express = require('express'),
-    db = require('../database/query');
+const express = require('express');
+const db = require('../database/query');
 
 // GET ALL COLORS in colors TABLE
 const getAllColors = (request, response, next) => {
-    db.query('SELECT * FROM colors ORDER BY id ASC', (error, results) => {
+    db.query('SELECT * FROM colors', (error, results) => {
         if(error) {
             return next(error)
         }

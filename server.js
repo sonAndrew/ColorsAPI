@@ -9,10 +9,8 @@ const { body, check } = require('express-validator')
 
 const server = express();
 const PORT = process.env.PORT || 8080;
-
-const isProduction = process.env.NODE_ENV === 'production'
 const origin = {
-  origin: isProduction ? 'ec2-52-7-39-178.compute-1.amazonaws.com' : '*',
+  origin: 'ec2-52-7-39-178.compute-1.amazonaws.com',
 }
 
 // REQUEST LIMIT
