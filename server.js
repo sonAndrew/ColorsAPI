@@ -40,9 +40,9 @@ server.use(limiter)
 server.use(express.static("public"));
 
 // ROUTES
-server.get('/', (request, response) => {
-    response.send('Home Page')
-})
+// server.get('/', (request, response) => {
+//     response.send('Home Page')
+// })
 
 // // GET ALL COLORS in colors TABLE
 // const getAllColors = (request, response, next) => {
